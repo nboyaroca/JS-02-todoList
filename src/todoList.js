@@ -15,8 +15,9 @@ export const todoList = {
     ],
        
     addTodo(newTodo) {
-        this.state.push({id: 4, task: newTodo});
+        this.state.push({id: Math.floor(Math.random()*100), task: newTodo}); //floor per num enters, random aleatoris entre 0 i 1, *100 entre 0 i 100
         this.render();
+        console.log(this.state)
     },
 
     deleteByIndex(index) {
@@ -24,21 +25,27 @@ export const todoList = {
         this.render();
     },
 
+    /*editByIndex(index) {
+        const edit = document.querySelector(${todo.task});
+        edit.textContent = ${todo.task};      
+    },*/
+
     render() {
         let html = "";
     
         for (const todo of this.state) { 
-            html += `<li>${todo.task} - <button id=${this.state.indexOf(todo)} class="deleteButton">delete</button></li>`;  
+            html += `<li>${todo.task}
+             - <button id=${this.state.indexOf(todo)} class="deleteButton">delete</button>
+             - <button id=${this.state.indexOf(todo)} class="editButton">edit</button></li>`;  
         }
         let DOMlist = document.getElementById("App") 
         DOMlist.innerHTML = html;
-        
-        let buttons = document.querySelectorAll(".deleteButton")
-        buttons.forEach(button => {
-        button.addEventListener('click', (e) => this.deleteByIndex(e.target.id));
-        });
+            
+        let delBbutton = document.querySelectorAll(".deleteButton")
+    delBbutton.forEach(button => {
+    button.addEventListener('click', (e) => this.deleteByIndex(e.target.id))
+    });
     }
 
-    
-    
+       
 }
