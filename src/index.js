@@ -7,7 +7,7 @@ document.getElementById('add-button').addEventListener('click', () => {
     todoInput.value = "";
 });
 
-/*document.querySelectorAll('.deleteButton').addEventListener('click', (e) => {
+/* document.querySelectorAll('.deleteButton').addEventListener('click', (e) => {
     todoList.deleteByIndex(e.target.id)
 });
 
@@ -23,6 +23,4 @@ let edBbutton = document.querySelectorAll(".editButton")
 
 
 
-todoList.render();
-
-
+todoList.render()

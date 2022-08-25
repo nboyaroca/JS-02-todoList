@@ -25,10 +25,23 @@ export const todoList = {
         this.render();
     },
 
-    /*editByIndex(index) {
-        const edit = document.querySelector(${todo.task});
-        edit.textContent = ${todo.task};      
-    },*/
+    inputCharge(contentText) {
+        document.getElementById("todoInput").value = contentText
+
+    },
+
+    editByIndex(index) {
+        //cargar la task en el input con el inputCharge
+        //editar el contenido
+        //enviar la nueva task
+        // const edit = document.querySelector("button");
+        // edit.textContent = `${todo.task}`;
+        this.inputCharge(this.state[index].task)
+        // alert(index)
+        this.render();
+    },
+
+
 
     render() {
         let html = "";
@@ -42,10 +55,14 @@ export const todoList = {
         DOMlist.innerHTML = html;
             
         let delBbutton = document.querySelectorAll(".deleteButton")
-    delBbutton.forEach(button => {
-    button.addEventListener('click', (e) => this.deleteByIndex(e.target.id))
+        delBbutton.forEach(button => {
+            button.addEventListener('click', (e) => this.deleteByIndex(e.target.id))
+
+        let editButton = document.querySelectorAll(".editButton")
+        editButton.forEach(button => {
+            button.addEventListener('click', (e) => this.editByIndex(e.target.id))
+        })
     });
     }
-
        
-}
+} 
