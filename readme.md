@@ -10,17 +10,23 @@
 ***
 ### General Info
 
-KATA to practice To Do List done by modules.
-Write a list where you can delete elements from a list doing click on a button, and adding elements to the list with an input.
+>KATA to practice To Do List done by modules.
+
+>Write a list where you can delete elements from a list doing click on a button, and adding elements to the list with an input.
 Also edit, when you click on edit button, the text goes to input where U can change it.
+
+>CRUD
 
 &nbsp;
 
 ### Technologies ⚙️
+
 >HTLM5
+
 >JS ES6 Vanilla
 
 &nbsp;
 
 ### NEXT STEPS 👣
-Stylish the app with CSS3
+
+>Stylish the app with CSS3
